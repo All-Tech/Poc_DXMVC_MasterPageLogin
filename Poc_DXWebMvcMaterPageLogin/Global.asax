@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="Poc_DXWebMvcMaterPageLogin.MvcApplication" Language="C#" %>
