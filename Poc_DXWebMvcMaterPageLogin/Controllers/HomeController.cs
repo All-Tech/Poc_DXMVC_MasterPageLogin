@@ -13,7 +13,7 @@ namespace Poc_DXWebMvcMaterPageLogin.Controllers
         {
             // DXCOMMENT: Pass a data model for GridView
             
-            return View(NorthwindDataProvider.GetCustomers());
+            return View();
         }
         
         public ActionResult GridViewPartialView() 
