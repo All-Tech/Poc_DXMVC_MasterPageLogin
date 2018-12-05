@@ -28,15 +28,14 @@ namespace Poc_DXWebMvcMaterPageLogin.Controllers {
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl) {
-            if(ModelState.IsValid) {
-                if(WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe.Value)) {
-                    return Redirect(returnUrl ?? "/");
-                }
-                ViewBag.ErrorMessage = "The user name or password provided is incorrect";
-            }
-
+            //if(ModelState.IsValid) {
+            //    if(WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe.Value)) {
+            //        return Redirect(returnUrl ?? "/");
+            //    }
+            //    ViewBag.ErrorMessage = "The user name or password provided is incorrect";
+            //} 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return RedirectToAction("Index", "Home");
         }
 
         //
